@@ -8,13 +8,13 @@ namespace Test.Console
     {
         static void Main(string[] args)
         {
-           
 
-            //using (var db = new Model1())
-            //{
 
-            //    //var results = new List<ExpenseIncome>();
-            //    // results = (from ex in db.ExpenseIncomes orderby ex.ID descending select ex).ToList();
+            using (var db = new Model1())
+            {
+
+                var results = new List<ExpenseIncome>();
+        results = (from ex in db.ExpenseIncomes orderby ex.ID descending select ex).ToList();
             //    var resultsOfUserGroup = new List<User>();
             //    resultsOfUserGroup = (from ex in db.Users orderby ex.ID descending select ex).Take(10).ToList();
 
@@ -25,7 +25,7 @@ namespace Test.Console
 
 
 
-            //}
+            }
 
 
             System.Console.ReadLine();
