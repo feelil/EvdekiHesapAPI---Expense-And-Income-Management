@@ -38,7 +38,7 @@ namespace Entity
         {
 
             ToTable("ExpenseIncomes")
-             .HasRequired(e => e.ExpenseIncomeType).WithMany().HasForeignKey(x => x.ExpIncTypeID);
+             .HasRequired(e => e.ExpenseIncomeType).WithMany().HasForeignKey(x => x.ExpIncTypeID); 
 
 
         }
