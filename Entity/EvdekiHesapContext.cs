@@ -2,9 +2,9 @@ namespace Entity
 {
     using System.Data.Entity;
     using System.Data.Entity.ModelConfiguration;
-    public partial class Model1 : DbContext
+    public partial class EvdekiHesapContext : DbContext
     {
-        public Model1()
+        public EvdekiHesapContext()
             : base("name=Model1")
         {
         }

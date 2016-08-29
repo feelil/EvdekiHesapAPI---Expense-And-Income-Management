@@ -13,7 +13,7 @@ namespace EvdekiHesap_Api.Controllers
         {
             ViewBag.Title = "Home Page";
             List<ExpenseIncome> sonuc = null;
-            using (var db = new Model1())
+            using (var db = new EvdekiHesapContext())
             {
                 //var sonuc = db.Accounts.Where(x => x.ID == 10).Select(x => new Account { ID = x.ID, Name=x.Name });
                 sonuc = (from tbl in db.ExpenseIncomes

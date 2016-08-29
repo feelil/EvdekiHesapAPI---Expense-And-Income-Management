@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\MyDevelopments\dot.Net\WebApi\EvdekiHesap_Api\DbFirstLibrary\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\GitHub\EvdekiHesap_Api\DbFirstLibrary\EvdekiHesapContext.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

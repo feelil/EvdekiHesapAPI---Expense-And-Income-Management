@@ -10,7 +10,7 @@ namespace Test.Console
         {
 
 
-            using (var db = new Model1())
+            using (var db = new EvdekiHesapContext())
             {
 
                 var results = new List<ExpenseIncome>();
