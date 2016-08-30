@@ -5,7 +5,7 @@ namespace Entity
     public partial class EvdekiHesapContext : DbContext
     {
         public EvdekiHesapContext()
-            : base("name=Model1")
+            : base("name=GelirGiderConnection")
         {
         }
 
@@ -37,7 +37,7 @@ namespace Entity
         public ExpenseIncomeMap()
         {
 
-            ToTable("ExpenseIncomes")
+            ToTable("eh.ExpenseIncomes")
              .HasRequired(e => e.ExpenseIncomeType).WithMany().HasForeignKey(x => x.ExpIncTypeID); 
 
 
@@ -48,7 +48,7 @@ namespace Entity
         public UserMap()
         {
 
-            ToTable("Users")
+            ToTable("eh.User")
             .HasRequired<UserGroup>(s => s.UserGroup)
              .WithMany(s => s.Users)
                 .HasForeignKey(s => s.UserGroupID);
@@ -60,7 +60,7 @@ namespace Entity
         public UserGroupMap()
         {
 
-            ToTable("UserGroups")
+            ToTable("eh.UserGroup")
             .HasMany<User>(s => s.Users);
 
 

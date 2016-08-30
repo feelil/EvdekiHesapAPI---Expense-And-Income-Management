@@ -12,6 +12,7 @@ namespace Entity
         public DateTime? AddedDate { get; set; }       
         public string GCMRegID { get; set; }       
         public string LanguageKey { get; set; }
+        public string Token { get; set; }
 
         public int? UserGroupID { get; set; }       
         public virtual UserGroup UserGroup { get; set; }

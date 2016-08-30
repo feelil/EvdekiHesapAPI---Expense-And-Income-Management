@@ -1,6 +1,8 @@
-﻿using Entity;
+﻿
 using System.Linq;
 using System.Collections.Generic;
+using System;
+using Entity;
 
 namespace Test.Console
 {
@@ -10,21 +12,21 @@ namespace Test.Console
         {
 
 
-            using (var db = new EvdekiHesapContext())
+            using (EvdekiHesapContext _repo = new EvdekiHesapContext())
             {
+                User user = null;
+                try
+                {
+                    user = _repo.Users.Where(x=>x.UserName == "ilhan" && x.PassWord == "123").FirstOrDefault();
+                }
+                catch (Exception ex)
+                {
 
-                var results = new List<ExpenseIncome>();
-        results = (from ex in db.ExpenseIncomes orderby ex.ID descending select ex).ToList();
-            //    var resultsOfUserGroup = new List<User>();
-            //    resultsOfUserGroup = (from ex in db.Users orderby ex.ID descending select ex).Take(10).ToList();
-
-            //    //var myusers = new List<User>();
-            //    //myusers = (from ex in db.Users orderby ex.ID descending select ex).ToList();
-            //    //var group = myusers[0].UserGroup;
+                    throw;
+                }
 
 
-
-
+                
             }
 
 
