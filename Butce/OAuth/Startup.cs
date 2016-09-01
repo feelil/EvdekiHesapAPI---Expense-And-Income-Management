@@ -30,7 +30,7 @@ namespace Butce.OAuth
             OAuthAuthorizationServerOptions oAuthAuthorizationServerOptions = new OAuthAuthorizationServerOptions()
             {
                 TokenEndpointPath = new Microsoft.Owin.PathString("/token"), // token alacağımız path'i belirtiyoruz
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(12),
                 AllowInsecureHttp = true,
                 Provider = new SimpleAuthorizationServerProvider()
             };
