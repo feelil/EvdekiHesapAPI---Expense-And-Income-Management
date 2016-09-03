@@ -33,7 +33,7 @@ namespace Butce.OAuth
                 User user = null;
                 try
                 {
-                    user = _repo.Users.Where(x => x.UserName == context.UserName && x.PassWord == context.Password).FirstOrDefault();
+                    user = new User { UserName = "ilhan", PassWord = "123" };// _repo.Users.Where(x => x.UserName == context.UserName && x.PassWord == context.Password).FirstOrDefault();
                 }
                 catch (Exception ex)
                 {

@@ -22,6 +22,7 @@ namespace Butce.OAuth
 
             WebApiConfig.Register(httpConfiguration);
             appBuilder.UseWebApi(httpConfiguration);
+            
         }
 
         private void ConfigureOAuth(IAppBuilder appBuilder)
@@ -44,6 +45,8 @@ namespace Butce.OAuth
             // Bearer token üzerinde güvenlik SSL'e dayanır.
             // Bir diğer tip ise MAC token'dır. OAuth 1.0 versiyonunda kullanılıyor, hem client'a, hemde server tarafına implementasyonlardan dolayı ek maliyet çıkartmaktadır. Bu maliyetin yanı sıra ise Bearer token'a göre kaynak alış verişinin biraz daha güvenli olduğu söyleniyor çünkü client her request'inde veriyi hmac ile imzalayıp verileri kriptolu bir şekilde göndermeleri gerektiği için.
             appBuilder.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+
+           
         }
     }
 }
