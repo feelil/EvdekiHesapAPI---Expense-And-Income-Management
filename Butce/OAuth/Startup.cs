@@ -31,9 +31,11 @@ namespace Butce.OAuth
             OAuthAuthorizationServerOptions oAuthAuthorizationServerOptions = new OAuthAuthorizationServerOptions()
             {
                 TokenEndpointPath = new Microsoft.Owin.PathString("/token"), // token alacağımız path'i belirtiyoruz
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(12),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1),
                 AllowInsecureHttp = true,
-                Provider = new SimpleAuthorizationServerProvider()
+                Provider = new SimpleAuthorizationServerProvider(),
+                RefreshTokenProvider = new SimpleRefreshTokenProvider()
+               
             };
 
             // AppBuilder'a token üretimini gerçekleştirebilmek için ilgili authorization ayarlarımızı veriyoruz.
