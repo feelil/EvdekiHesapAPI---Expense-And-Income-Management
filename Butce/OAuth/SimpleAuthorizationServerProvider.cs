@@ -24,9 +24,9 @@ namespace Butce.OAuth
                 context.TryGetFormCredentials(out clientId, out clientSecret);
             }
            
-                if (clientSecret == "test_secret")
+                if (clientSecret == "test_Secret")
                 {
-                    context.Validated();
+                  bool isValid=  context.Validated();
                 }
             
 
@@ -72,7 +72,7 @@ namespace Butce.OAuth
 
 
 
-                    var ticket = new AuthenticationTicket(identity, props);
+                    var ticket = new AuthenticationTicket(identity,null);
                     context.Validated(ticket);
                     // user.Token = ???  At this point I want to save the genereted token to the DB. ??
                     //   _repo.SaveChanges();
